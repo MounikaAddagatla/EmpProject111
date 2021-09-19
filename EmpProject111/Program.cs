@@ -9,6 +9,7 @@ namespace EmpProject111
             Console.WriteLine("Welocome to Employee Wage computation");
             WageCaluclation empWage = new WageCaluclation();
             empWage.Attendance();
+            empWage.EmpWageCal();
             Console.ReadKey();
         }
     }
