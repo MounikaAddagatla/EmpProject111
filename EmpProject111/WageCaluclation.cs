@@ -6,7 +6,7 @@ namespace EmpProject111
 {
     class WageCaluclation
     {
-        const int IS_PRESENT = 1, WAGE_PER_HOUR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2;
+        const int IS_PRESENT = 1, WAGE_PER_HOUR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2, WORKING_DAY_MONTH = 20;
         int totalEmpWage = 0, partTimeEmpWage = 0, empHrs = 0;
         public void Attendance()
         {
@@ -41,6 +41,11 @@ namespace EmpProject111
                 default:
                     empHrs += 0;
                     break;
+            }
+            //Cal emp wages per month
+            for (int i = 1; i < WORKING_DAY_MONTH; i++)
+            {
+                totalEmpWage = empHrs * WAGE_PER_HOUR;
             }
             totalEmpWage = empHrs * WAGE_PER_HOUR;
             Console.WriteLine("Total emp wage is: " + totalEmpWage);
