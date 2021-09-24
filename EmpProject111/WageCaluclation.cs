@@ -7,7 +7,7 @@ namespace EmpProject111
     class WageCaluclation
     {
         const int IS_PRESENT = 1, WAGE_PER_HOUR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2, WORKING_DAY_MONTH = 20, workingDays = 0, TOTAL_WORKING_HRS = 100;
-        int totalEmpWage = 0, partTimeEmpWage = 0, empHrs = 0, workDays = 0;
+        int totalEmpWage = 0, empHrs = 0, workDays = 0, working_days = 0, working_hrs = 0, dailyEmpWages = 0;
         public void Attendance()
         {
             Random random = new Random();
@@ -27,7 +27,6 @@ namespace EmpProject111
             int empCheck = random.Next(0, 3);
             while (workDays < WORKING_DAY_MONTH && empHrs <= TOTAL_WORKING_HRS)
             {
-
                 workDays = workDays + 1;
                 if (empCheck == IS_PRESENT)
                 {
