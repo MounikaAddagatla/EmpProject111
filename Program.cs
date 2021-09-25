@@ -6,10 +6,12 @@ namespace EmpProject111
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welocome to Employee Wage computation");
-            WageCaluclation empWage = new WageCaluclation();
-            empWage.Attendance();
-            empWage.EmpWageCal();
+           EmpWageObject avail = new EmpWageObject("Avail",20,2,10);
+            EmpWageObject ncr = new EmpWageObject("NCR", 10, 4, 20);
+            avail.ComputeEmpWage();
+           // Console.WriteLine(avail.toString());
+            ncr.ComputeEmpWage();
+         //   Console.WriteLine("NCR",10,4,20);
             Console.ReadKey();
         }
     }
