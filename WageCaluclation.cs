@@ -4,10 +4,11 @@ using System.Text;
 
 namespace EmpProject111
 {
-    class WageCaluclation
+    internal class WageCaluclation : IEmpCompanyName
     {
         const int IS_PRESENT = 1, WAGE_PER_HOUR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2, WORKING_DAY_MONTH = 20, workingDays = 0, TOTAL_WORKING_HRS = 100;
-        int totalEmpWage = 0, empHrs = 0, workDays = 0, working_days = 0, working_hrs = 0, dailyEmpWages = 0;
+        int totalEmpWage = 0, empHrs = 0, workDays = 0, working_days = 0, working_hrs = 0, dailyEmpWages = 0, working_day_month;
+        readonly string company = "BridgeLabzs";
         public void Attendance()
         {
             Random random = new Random();
@@ -21,6 +22,12 @@ namespace EmpProject111
                 Console.WriteLine("Employee is Absent");
             }
         }
+
+        public int ComputeEmpWage(string company, int wage_per_hr, int total_working_hrs, int working_day_month)
+        {
+            throw new NotImplementedException();
+        }
+
         public void EmpWageCal()
         {
             Random random = new Random();
@@ -58,6 +65,9 @@ namespace EmpProject111
                 totalEmpWage = empHrs * WAGE_PER_HOUR;
                 Console.WriteLine("working hrs: " + empHrs + ",working days:" + workingDays);
                 Console.WriteLine("Total emp wage is: " + totalEmpWage);
+              
+                Console.WriteLine("Total employee wage for " + company + " of " + working_day_month + " days is :" + totalEmpWage);
+
             }
         }
     }
