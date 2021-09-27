@@ -4,20 +4,20 @@ using System.Text;
 
 namespace EmpProject111
 {
-   public class EmpWageObject
-   {
+    public class EmpWageObject
+    {
         /// <summary>
         /// // variable intialization
         /// </summary>
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        
-        private  string company;
+
+        private string company;
         private int empRatePerHour;
         private int numOfWorkingDays;
         private int maxHoursPerMonth;
         private int totalEmpWage;
-        public  EmpWageObject(string company,int empRatePerHour,int numOfWorkingDays,int maxHourPerMonth)
+        public EmpWageObject(string company, int empRatePerHour, int numOfWorkingDays, int maxHourPerMonth)
         {
             this.company = company;
             this.empRatePerHour = empRatePerHour;
@@ -30,12 +30,12 @@ namespace EmpProject111
             //variables
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
             //computation
-            while(totalEmpHrs<=this.maxHoursPerMonth && totalWorkingDays < this.numOfWorkingDays)
+            while (totalEmpHrs <= this.maxHoursPerMonth && totalWorkingDays < this.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
-                switch(empCheck)
+                switch (empCheck)
                 {
                     case IS_PART_TIME:
                         empHrs = 4;
@@ -54,10 +54,12 @@ namespace EmpProject111
             Console.WriteLine("Total Emp Wage for Compant :" + company + "is :" + totalEmpWage);
         }
 
-       public string toString()
+        public string toString()
         {
             return "Total Emp Wage for Company :" + company + "is :" + this.totalEmpWage;
+
         }
     }
 }
+
 

@@ -11,7 +11,7 @@ namespace EmpProject111
             avail.ComputeEmpWage();
            // Console.WriteLine(avail.toString());
             ncr.ComputeEmpWage();
-         //   Console.WriteLine("NCR",10,4,20);
+           // Console.WriteLine("NCR",10,4,20);
             Console.ReadKey();
         }
     }
