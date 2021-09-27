@@ -6,12 +6,10 @@ namespace EmpProject111
     {
         static void Main(string[] args)
         {
-           EmpWageObject avail = new EmpWageObject("Avail",20,2,10);
-            EmpWageObject ncr = new EmpWageObject("NCR", 10, 4, 20);
-            avail.ComputeEmpWage();
-           // Console.WriteLine(avail.toString());
-            ncr.ComputeEmpWage();
-           // Console.WriteLine("NCR",10,4,20);
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addCompanyEmpWage("Avail", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage("NCR", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage();
             Console.ReadKey();
         }
     }
